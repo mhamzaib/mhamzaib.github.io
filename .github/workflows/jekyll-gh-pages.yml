@@ -39,8 +39,8 @@ jobs:
         run:  npm install
       - name: Build application
         run: |
-          next build
-          next start
+          npm run build
+          npm run dev
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
