@@ -40,7 +40,6 @@ jobs:
       - name: Build application
         run: |
           npm run build
-          npm run dev
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
