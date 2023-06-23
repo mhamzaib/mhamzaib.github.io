@@ -39,13 +39,12 @@ jobs:
         run:  npm install
       - name: Build application
         run: |
-          npm run build
-          cd build
-          ls -la
+          next build
+          next start
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./build
+          source: ./.next
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
