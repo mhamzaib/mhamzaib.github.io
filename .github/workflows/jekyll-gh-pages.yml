@@ -41,9 +41,7 @@ jobs:
           always-auth: false
           node-version: 18.16.1
       - name: Install Dependencies
-        run: 
-            npm clear cache --force
-            npm install
+        run:  npm install
       - name: Build application
         run: npm run build
       - name: Upload artifact
