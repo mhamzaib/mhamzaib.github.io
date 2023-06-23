@@ -32,7 +32,11 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.2
         with:
+          always-auth: false
+          node-version: 12.22.9
           source: ./
           destination: ./_site
       - name: Upload artifact
