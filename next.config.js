@@ -1,6 +1,8 @@
+import { withContentlayer } from 'next-contentlayer';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: "export"
-}
+  reactStrictMode: true,
+};
 
-module.exports = nextConfig
+export default withContentlayer(nextConfig);
